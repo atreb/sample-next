@@ -4,9 +4,9 @@
   "description": "sample app using nextjs",
   "scripts": {
     "test": "eslint .",
-    "dev": "next",
+    "dev": "supervisor -w server.js,services,resources -e js,json server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
@@ -23,9 +23,11 @@
   "homepage": "https://github.com/atreb/sample-next#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.6",
-    "eslint": "^5.4.0"
+    "eslint": "^5.4.0",
+    "supervisor": "^0.12.0"
   },
   "dependencies": {
+    "express": "^4.16.3",
     "next": "^6.1.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
