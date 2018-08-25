@@ -4,7 +4,7 @@
   "description": "sample app using nextjs",
   "scripts": {
     "test": "eslint .",
-    "dev": "supervisor -w server.js,services,resources -e js,json server.js",
+    "dev": "supervisor -w server.js,routes,services,resources -e js,json server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },

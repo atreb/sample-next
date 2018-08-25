@@ -15,4 +15,9 @@ export default () =>
     </Link>{' '}
     to see user agent
   </p>
+  <p>
+    <Link href="/orgs/dj01/apps/test/stacks/prod">
+      <a>dj01:test:prod</a>
+    </Link>
+  </p>
   </div>

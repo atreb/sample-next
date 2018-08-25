@@ -6,17 +6,24 @@ const express = require('express'),
   app = express(),
   next = require('next'),
   dev = process.env.NODE_ENV !== 'production',
-  nextApp = next({ dev }),
+  nextApp = next({ dev, useFileSystemPublicRoutes: false }),
   nextHandle = nextApp.getRequestHandler(),
   parse = require('url').parse,
   PORT = process.env.PORT || 3000;
 
 // custom server side only routing here
-app.get('/_health', (req, res, next) => {
-  res.send(':-) asd');
+app.use(require('./routers/serverOnly'));
+
+// custom isomorphic routing
+const isomorphicRoutes = require('./routers/isomorphic');
+Object.keys(isomorphicRoutes).forEach(path => {
+  console.log(path, isomorphicRoutes[path]);
+  app.get(path, (req, res) => {
+    return nextApp.render(req, res, `/${isomorphicRoutes[path]}`, req.query);
+  });
 });
 
-// default routing for nextjs
+// default page routing for nextjs
 app.get('*', (req, res) => {
   const parsedUrl = parse(req.url, true);
   nextHandle(req, res, parsedUrl);
