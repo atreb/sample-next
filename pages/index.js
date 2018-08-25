@@ -9,11 +9,9 @@ export default () =>
   </Head>
   <p>Welcome to <img src='/static/next.png'/></p>
   <p>
-    Click{' '}
-    <Link href="/agent">
-      <a>here</a>
+    <Link href="/test/agent">
+      <a>click here to see your user agent</a>
     </Link>{' '}
-    to see user agent
   </p>
   <p>
     <Link href="/orgs/dj01/apps/test/stacks/prod">
