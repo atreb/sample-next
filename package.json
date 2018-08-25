@@ -1,0 +1,25 @@
+{
+  "name": "sample-next",
+  "version": "0.0.1",
+  "description": "sample app using nextjs",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atreb/sample-next.git"
+  },
+  "keywords": [
+    "nextjs"
+  ],
+  "author": "bhupendra.atre@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atreb/sample-next/issues"
+  },
+  "homepage": "https://github.com/atreb/sample-next#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0"
+  }
+}
