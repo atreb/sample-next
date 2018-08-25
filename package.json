@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "sample app using nextjs",
   "scripts": {
-    "test": "eslint ."
+    "test": "eslint .",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,10 @@
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "eslint": "^5.4.0"
+  },
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   }
 }
