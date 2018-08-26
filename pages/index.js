@@ -11,7 +11,7 @@ export default () =>
   <p>
     <Link href="/test/agent">
       <a>click here to see your user agent</a>
-    </Link>{' '}
+    </Link>
   </p>
   <p>
     <Link href="/orgs/dj01/apps/test/stacks/prod">
